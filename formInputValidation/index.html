@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+      }
+      /* body {
+        background-color: black;
+      } */
+      .container {
+        border: 1px solid gray;
+        background-color: #262626;
+        width: 500px;
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 10px;
+        box-shadow: -2px 2px 5px #262626;
+      }
+      .container h3 {
+        color: #fff;
+      }
+      #d1 {
+        width: 500px;
+        height: 300px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 2px dashed black;
+        box-shadow: 2px 2px 5px black;
+        font-size: 1.4rem;
+        color: brown;
+      }
+      #d1 h3 {
+        text-align: center;
+        color: black;
+        text-decoration: underline red dotted;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Application</h3>
+      <form action="">
+        <input
+          type="text"
+          placeholder="Your First Name..."
+          name="fname"
+          id="fname"
+          required
+          autofocus
+        />
+        <input
+          type="text"
+          name="lname"
+          placeholder="Your Last Name..."
+          id="lname"
+          required
+        />
+        <br /><br />
+        <input
+          type="email"
+          placeholder="Your E-mail"
+          name="email"
+          id="email"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Your Password"
+          name="password"
+          id="pass"
+          required
+        />
+        <br /><br />
+        <input type="button" value="Submit" name="" id="sub" />
+      </form>
+    </div>
+
+    <div id="d1">
+      <h3>Personal Details</h3>
+    </div>
+
+    <script>
+      let submit = document.getElementById("sub");
+      submit.addEventListener("click", display);
+      function display() {
+        let d1 = document.getElementById("d1");
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("pass").value;
+        d1.innerHTML +=
+          "FName= " +
+          fname +
+          "<br>" +
+          " LName= " +
+          lname +
+          "<br>" +
+          " E-mail=" +
+          email +
+          "<br>" +
+          " Password=" +
+          pass;
+        // alert(d1);
+      }
+    </script>
+  </body>
+</html>
